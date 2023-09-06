@@ -1,6 +1,6 @@
 import os
 
-dir_name = "/Users/geoffreymatis/personal_github_page/geofftm.github.io/js/images"
+dir_name = "js/images"
 images_path = os.listdir(dir_name)
 
 image_list = []
@@ -11,7 +11,7 @@ for index, image in enumerate(images_path):
         # image_list.append(os.path.join(dir_name, image)) 
 
 
-with open("/Users/geoffreymatis/personal_github_page/geofftm.github.io/js/loadImages.js", "w") as f:
+with open("js/loadImages.js", "w") as f:
     f.write("randomImage()\n")
     f.write("\n")
     f.write("function randomImage() {")
