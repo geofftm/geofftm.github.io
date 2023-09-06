@@ -1,10 +1,10 @@
 import os
 
-dir_name = "/Users/geoffreymatis/personal_github_page/geofftm.github.io/js/images/Archive"
+dir_name = "/Users/geoffreymatis/personal_github_page/geofftm.github.io/js/images"
 images_path = os.listdir(dir_name)
 img_ext = '.jpg'
 
-image_list = ['js/images/Archive/' + i for i in images_path if img_ext in i.lower()]
+image_list = ['js/images/' + i for i in images_path if img_ext in i.lower()]
 
 with open("/Users/geoffreymatis/personal_github_page/geofftm.github.io/js/loadImages.js", "w") as f:
     f.write("randomImage()\n")
@@ -21,7 +21,7 @@ with open("/Users/geoffreymatis/personal_github_page/geofftm.github.io/js/loadIm
     f.write("\n")
     f.write("   var randomImageSrc = images[Math.floor(Math.random() * images.length)];")
     f.write("\n")
-    f.write('''     var image = "<a href='index.html'><img src='" + randomImageSrc + "'></a>";''')
+    f.write('''     var image = "<a href='index.html'><img src='" + randomImageSrc + "' style='width: 80%; height: auto;'></a>";''')
     f.write("\n")
     f.write("   document.getElementById('img-load').innerHTML = image;")
     f.write("\n")
