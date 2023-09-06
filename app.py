@@ -1,12 +1,12 @@
 import os
 
-dir_name = "/Users/geoffreymatis/personal_github_page/geofftm.github.io/js/images"
+dir_name = "js/images"
 images_path = os.listdir(dir_name)
 img_ext = '.jpg'
 
 image_list = ['js/images/' + i for i in images_path if img_ext in i.lower()]
 
-with open("/Users/geoffreymatis/personal_github_page/geofftm.github.io/js/loadImages.js", "w") as f:
+with open("js/loadImages.js", "w") as f:
     f.write("randomImage()\n")
     f.write("\n")
     f.write("function randomImage() {")
