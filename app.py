@@ -1,6 +1,6 @@
 import os
 
-dir_name = "/Users/geoffreymatis/personal_github_page/geofftm.github.io/js/images"
+dir_name = "images/path"
 images_path = os.listdir(dir_name)
 
 image_list = []
@@ -21,7 +21,7 @@ with open("/Users/geoffreymatis/personal_github_page/geofftm.github.io/js/loadIm
     f.write("\n")
     f.write("var randomImageSrc = images[Math.floor(Math.random() * images.length)];")
     f.write("\n")
-    f.write('''var image = "<img src='" + randomImageSrc + "'>";''')
+    f.write('''var image = "<a href='about.html'><img src='" + randomImageSrc + "'></a>";''')
     f.write("\n")
     f.write("document.getElementById('img-load').innerHTML = image;")
     f.close()
