@@ -17,6 +17,7 @@ body {
 } 
 
 img {
+
   border: 1px solid #4CAF50;
   border-style: hidden;
   /* padding: 25px 50px 25px 50px; */
@@ -27,9 +28,17 @@ img {
       padding: 0;
       margin: 0;} */
       /* padding: 25px 50px 25px 50px;} */
+
+/* .fade-img {
+  -webkit-transition: .5s;
+  transition: .5;
+  opacity: 1;
+      } */
+
 div {text-align: center;}
 div.row{padding: 0;}
 p {text-align: left;}
+.bottom-text{padding-bottom: 50px;}
 a {text-decoration: none;}
 /* .content {margin: auto;
         padding: 10px;} */
