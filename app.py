@@ -2,14 +2,9 @@ import os
 
 dir_name = "js/images"
 images_path = os.listdir(dir_name)
+img_ext = '.jpg'
 
-image_list = []
-
-for index, image in enumerate(images_path):
-    if image.endswith(".JPG") or image.endswith(".jpg"):
-        image_list.append(f"'js/images/{image}'")
-        # image_list.append(os.path.join(dir_name, image)) 
-
+image_list = ['js/images/' + i for i in images_path if img_ext in i.lower()]
 
 with open("js/loadImages.js", "w") as f:
     f.write("randomImage()\n")
@@ -19,14 +14,14 @@ with open("js/loadImages.js", "w") as f:
     f.write("   var images = [")
     for index, i in enumerate(image_list):
         if index != (len(image_list) - 1):
-            f.write(f"{i}, ")
+            f.write(f"'{i}', ")
         else:
-            f.write(f"{i}")
+            f.write(f"'{i}'")
     f.write("]")
     f.write("\n")
     f.write("   var randomImageSrc = images[Math.floor(Math.random() * images.length)];")
     f.write("\n")
-    f.write(    '''var image = "<a href='index.html'><img src='" + randomImageSrc + "'></a>";''')
+    f.write('''     var image = "<a href='index.html'><img src='" + randomImageSrc + "'></a>";''')
     f.write("\n")
     f.write("   document.getElementById('img-load').innerHTML = image;")
     f.write("\n")
