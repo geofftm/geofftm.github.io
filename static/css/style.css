@@ -19,7 +19,7 @@ img {
   border: 1px solid #4CAF50;
   border-style: hidden;
   /* padding: 25px 50px 25px 50px; */
-  max-width: 80%;
+  width: 80%;
   height: auto;}
   /* body {font-family: Copperplate, Papyrus, fantasy;
       height: 100%;
@@ -34,7 +34,7 @@ img {
       } */
 
 div {text-align: center;}
-/* div.row{padding: 5px;} */
+div.row{padding: 25px;}
 p {text-align: left;}
 .bottom-text{padding-bottom: 50px;}
 a {text-decoration: none;}
